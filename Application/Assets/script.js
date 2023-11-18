@@ -1,6 +1,3 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 
 $(function () {
 
@@ -36,19 +33,104 @@ $(function () {
   var h3t = $(`#h3t`);
   var h4t = $(`#h4t`);
   var h5t = $(`#h5t`);
+
+// Save and Display for Hour Tasks
+
+// 9am
+  var h9Task = localStorage.getItem("h9Task")
+  if (h9Task) {
+    document.getElementById("h9t").innerHTML = localStorage.h9Task}
+
+  $(btn9).click(function(){
+localStorage.h9Task = (h9t).val()
+})
   
-  
-  //Main clock
+// 10am
+  var h10Task = localStorage.getItem("h10Task")
+  if (h10Task) {
+    document.getElementById("h10t").innerHTML = localStorage.h10Task}
+
+  $(btn10).click(function(){
+localStorage.h10Task = (h10t).val()
+})
+
+// 11am
+  var h11Task = localStorage.getItem("h11Task")
+  if (h11Task) {
+    document.getElementById("h11t").innerHTML = localStorage.h11Task}
+
+  $(btn11).click(function(){
+localStorage.h11Task = (h11t).val()
+})
+
+// 12am
+  var h12Task = localStorage.getItem("h12Task")
+  if (h12Task) {
+    document.getElementById("h12t").innerHTML = localStorage.h12Task}
+
+  $(btn12).click(function(){
+localStorage.h12Task = (h12t).val()
+})
+
+// 1am
+  var h1Task = localStorage.getItem("h1Task")
+  if (h1Task) {
+    document.getElementById("h1t").innerHTML = localStorage.h1Task}
+
+  $(btn1).click(function(){
+localStorage.h1Task = (h1t).val()
+})
+
+// 2am
+  var h2Task = localStorage.getItem("h2Task")
+  if (h2Task) {
+    document.getElementById("h2t").innerHTML = localStorage.h2Task}
+
+  $(btn2).click(function(){
+localStorage.h2Task = (h2t).val()
+})
+
+// 3am
+  var h3Task = localStorage.getItem("h3Task")
+  if (h3Task) {
+    document.getElementById("h3t").innerHTML = localStorage.h3Task}
+
+  $(btn3).click(function(){
+localStorage.h3Task = (h3t).val()
+})
+
+// 4am
+  var h4Task = localStorage.getItem("h4Task")
+  if (h4Task) {
+    document.getElementById("h4t").innerHTML = localStorage.h4Task}
+
+  $(btn4).click(function(){
+localStorage.h4Task = (h4t).val()
+})
+
+// 5am
+  var h5Task = localStorage.getItem("h5Task")
+  if (h5Task) {
+    document.getElementById("h5t").innerHTML = localStorage.h5Task}
+
+  $(btn5).click(function(){
+localStorage.h5Task = (h5t).val()
+})
+
+
+  //Main clock & Min Clock
   setInterval(update, 1000) 
   
   update()
 
-  // Past - grey Future = green Present = red
+
   function update() {
-    var time = dayjs().format(`hh:mm:ss`)
+    var time = dayjs().format(`ddd MMM D`)
+    var minTime = dayjs().format(`h:mm:ss`)
     $(`#main-time`).text(time) 
-    
-  // var currentTime = 14
+    $(`#min-time`).text(minTime) 
+
+  // Color Updaters
   var currentTime = dayjs().format(`HH`) 
   console.log(currentTime)
   
@@ -176,29 +258,3 @@ $(function () {
       }
   }
 }});
-
-
-// Make an event listener that ties to save button and updates cards text to current input
-
-// Expand css vairable to apply to all current time slots
-
-// Find way to save current data in local storage
-
-// TODO: Add a listener for click events on the save button. This code should
-// use the id in the containing time-block as a key to save the user input in
-// local storage. HINT: What does `this` reference in the click listener
-// function? How can DOM traversal be used to get the "hour-x" id of the
-// time-block containing the button that was clicked? How might the id be
-// useful when saving the description in local storage?
-//
-// TODO: Add code to apply the past, present, or future class to each time
-// block by comparing the id to the current hour. HINTS: How can the id
-// attribute of each time-block be used to conditionally add or remove the
-// past, present, and future classes? How can Day.js be used to get the
-// current hour in 24-hour time?
-//
-// TODO: Add code to get any user input that was saved in localStorage and set
-// the values of the corresponding textarea elements. HINT: How can the id
-// attribute of each time-block be used to do this?
-//
-// TODO: Add code to display the current date in the header of the page.

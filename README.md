@@ -1,99 +1,43 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Daily Planner
 
-## Your Task
+## Description
+The Daily Planner is a simple web application designed to help employees manage their busy schedules effectively. Users can add important events to a daily schedule, with each time block color-coded to indicate whether it is in the past, present, or future. Additionally, the application allows users to save events, ensuring that the schedule persists even after a page refresh.
 
-Create a simple calendar application that allows a user to save events for each hour of a typical working day (9am&ndash;5pm) by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+## Features
+Current Day Display: Upon opening the planner, the current day is prominently displayed at the top of the calendar.
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+Timeblocks for Standard Business Hours: As users scroll down, they are presented with time blocks for the standard business hours of 9am–5pm.
 
-## User Story
+Color-Coded Timeblocks: Each time block is color-coded to indicate whether it is in the past, present, or future. This visual representation helps users quickly identify the status of each time block.
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+Event Entry: Users can click into a time block and enter an event for that specific hour.
 
-## Acceptance Criteria
+Save Events to Local Storage: After entering an event, users can save it by clicking the save button for that time block. The text for the event is then saved in local storage.
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours of 9am&ndash;5pm
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+Persistent Saved Events: Even after refreshing the page, the saved events persist, ensuring that users can rely on the application to retain their schedules.
 
-The following animation demonstrates the application functionality:
+## Usage
+Open the Daily Planner web application.
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
 
-## Grading Requirements
+Scroll down to view time blocks.
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+Color-coded time blocks will indicate whether they are in the past, present, or future.
 
-This Challenge is graded based on the following criteria:
+Click into a time block to enter an event.
 
-### Technical Acceptance Criteria: 40%
+Save the event by clicking the save button for that time block.
 
-* Satisfies all of the above acceptance criteria plus the following:
+Refresh the page, and the saved events will persist.
 
-  * Uses a date utility library to work with date and time
+## Technologies Used
+HTML
+CSS
+JavaScript
+jQuery (for DOM manipulation)
+Local Storage (for data persistence)
 
-### Deployment: 32%
+## Application Preview
+![Preview of the Day Planner Application showing time features and listed event slots.](./Application/Assets/App.jpg) 
 
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Link
