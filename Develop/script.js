@@ -4,7 +4,6 @@
 
 $(function () {
 
-    
   //Hour Variable
   var hour9 = $("#hour-9");
   var hour10 = $("#hour-10");
@@ -15,9 +14,31 @@ $(function () {
   var hour15 = $("#hour-3");
   var hour16 = $("#hour-4");
   var hour17 = $("#hour-5");
+
+  //Btn
+  var btn9 = $(`#btn9`);
+  var btn10 = $(`#btn10`);
+  var btn11 = $(`#btn11`);
+  var btn12 = $(`#btn12`);
+  var btn1 = $(`#btn1`);
+  var btn2 = $(`#btn2`);
+  var btn3 = $(`#btn3`);
+  var btn4 = $(`#btn4`);
+  var btn5 = $(`#btn5`);
+
+  //Containers
+  var h9t = $(`#h9t`);
+  var h10t = $(`#h10t`);
+  var h11t = $(`#h11t`);
+  var h12t = $(`#h12t`);
+  var h1t = $(`#h1t`);
+  var h2t = $(`#h2t`);
+  var h3t = $(`#h3t`);
+  var h4t = $(`#h4t`);
+  var h5t = $(`#h5t`);
   
   
-    //Main clock
+  //Main clock
   setInterval(update, 1000) 
   
   update()
