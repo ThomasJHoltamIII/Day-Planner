@@ -41,3 +41,4 @@ Local Storage (for data persistence)
 ![Preview of the Day Planner Application showing time features and listed event slots.](./Application/Assets/App.jpg) 
 
 ## Link
+https://thomasjholtamiii.github.io/Day-Planner/
