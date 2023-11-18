@@ -10,11 +10,11 @@
     var hour10 = $("#hour-10");
     var hour11 = $("#hour-11");
     var hour12 = $("#hour-12");
-    var hour1 = $("#hour-1");
-    var hour2 = $("#hour-2");
-    var hour3 = $("#hour-3");
-    var hour4 = $("#hour-4");
-    var hour5 = $("#hour-5");
+    var hour13 = $("#hour-1");
+    var hour14 = $("#hour-2");
+    var hour15 = $("#hour-3");
+    var hour16 = $("#hour-4");
+    var hour17 = $("#hour-5");
     
     
       //Main clock
@@ -22,18 +22,112 @@
     
     update()
 
-    
+    // Past - grey Future = green Present = red
     function update() {
-    var time = dayjs().format(`hh:mm:ss`)
-    $(`#main-time`).text(time) 
+      var time = dayjs().format(`hh:mm:ss`)
+      $(`#main-time`).text(time) 
+      
+    var currentTime = 14
+    // var currentTime = dayjs().format(`HH`) 
+    console.log(currentTime)
     
-    var currentTime = dayjs().format(`HH`) 
-    
-    { if (currentTime === `9`) 
+    // 9am
+    { if (currentTime === 9 && currentTime < 10) 
     {
       hour9.addClass(`present`) }
+
+      else if (currentTime < 9) {
+        hour9.addClass(`future`)   
+      }
+
     else {
     hour9.addClass(`past`) } }
+
+    // 10am
+    { if (currentTime === 10) 
+      {
+        hour10.addClass('present') }
+
+        else if (currentTime < 10) {
+          hour10.addClass(`future`)
+        }
+
+        else {
+          hour10.addClass(`past`)
+        }
+    }
+    
+    // 11am
+    { if (currentTime === 11) 
+      {
+        hour11.addClass('present') }
+
+        else if (currentTime < 11) {
+          hour11.addClass(`future`)
+        }
+
+        else {
+          hour11.addClass(`past`)
+        }
+    }
+    
+    // 12am
+    { if (currentTime === 12) 
+      {
+        hour12.addClass('present') }
+
+        else if (currentTime < 12) {
+          hour12.addClass(`future`)
+        }
+
+        else {
+          hour12.addClass(`past`)
+        }
+    }
+    
+    // 1pm
+    { if (currentTime === 13) 
+      {
+        hour13.addClass('present') }
+
+        else if (currentTime < 13) {
+          hour13.addClass(`future`)
+        }
+
+        else {
+          hour13.addClass(`past`)
+        }
+    }
+    
+    // 2pm
+    { if (currentTime === 14) 
+      {
+        hour14.addClass('present') }
+
+        else if (currentTime < 14) {
+          hour14.addClass(`future`)
+        }
+
+        else {
+          hour14.addClass(`past`)
+        }
+    }
+    
+    // 3pm
+    { if (currentTime === 15) 
+      {
+        hour15.addClass('present') }
+
+        else if (currentTime < 15) {
+          hour15.addClass(`future`)
+        }
+
+        else {
+          hour15.addClass(`past`)
+        }
+    }
+
+
 }});
 
 
